@@ -42,7 +42,7 @@ int main()
 			}
 
 			cout << "What is the resolution of your monitor? \n";
-			cout <<	"\t\t1/ 1280 x 720\n";
+			cout <<	"\t\t1. 1280 x 720\n";
 			cout << "\t\t2. 1920 x 1080\n";
 			cout << "\t\t3. 2560 x 1440\n";
 			cout << "\t\t4. 3840 x 2160\n";
