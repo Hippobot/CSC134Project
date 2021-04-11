@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	int ComputerNumber, GPUclockspeed, CPUclockspeed, Cores;
-	string Resolution, GraphicsQuality;
+	string resolution, graphicsQuality;
 	float performanceScore, multiplier;
 	float highPerformanceScore = 0, lowPerformanceScore = 0;
 	
@@ -51,6 +51,7 @@ int main()
             cout << "\n\t\t3. 2560 x 1440";
             cout << "\n\t\t4. 3840 x 2160";
             cout << "\nPlease select from the options above: ";
+            
             int choice;
             cin >> choice;
             while (choice < 1 || choice > 4)
@@ -82,10 +83,63 @@ int main()
             
             performanceScore = ((5 * graphicCardClockSpeed) + (cores * processorClockSpeed)) * multiplier;
 		
-		
+			if (performanceScore > 17000)
+            {
+                graphicsQuality = "Ultra";
+            }
+            else if (performanceScore > 15000 && performanceScore <= 17000)
+            {
+                graphicsQuality = "High";
+            }
+            else if (performanceScore > 13000 && performanceScore <= 15000)
+            {
+                graphicsQuality = "Medium";
+            }
+            else if (performanceScore > 11000 && performanceScore <= 13000)
+            {
+                graphicsQuality = "Low";
+            }
+            else
+            {
+                graphicsQuality = "Unable to Play";
+            }
+			
+			if (highPerformanceScore == 0 && lowPerformanceScore == 0)
+            {
+                highPerformanceScore = performanceScore;
+                lowPerformanceScore = performanceScore;
+            }
+            else
+            {
+                if (performanceScore > highPerformanceScore)
+                {
+                    highPerformanceScore = performanceScore;
+                }
+                if (performanceScore < lowPerformanceScore)
+                {
+                    lowPerformanceScore = performanceScore;
+                }
+            }
+            
+            cout << "GPU Clock Speed: " << GPUclockspeed << " MHz";
+            cout << "\nCPU Clock Speed: " << CPUclockspeed << " MHz";
+            cout << "\nNumber of cores: " << Cores;
+            cout << "\nMonitor Resolution: " << resolution;
+            cout << "\nPerformance Score: " << performanceScore;
+            cout << "\nRecommended Graphics Quality: " << graphicsQuality << "\n";
 	
-	
+			
 	
 		}
 		
 	}
+	else
+	{
+		cout << "Invalid Input(count of computers to be less than 0";
+	}
+	
+	cout << "The highest performance score was: " << highPerformanceScore;
+    cout << "\nThe lowest performance score was: " << lowPerformanceScore;
+    // Complete step 5
+    return 0;
+}
