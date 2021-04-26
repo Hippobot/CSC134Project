@@ -62,5 +62,16 @@ string getRecommendedQuality(double Performance)
 	return"";
 }
 
+void DisplayInformation(double GPUclockspeed, double CPUclockspeed, double Cores, string Monitor_Res, double Performance, string graphicsQuality)
+{
+	cout << "Computer Hardware Graphics Quality Tool \n\n";
+	cout << "GPU Clock Speed: " << GPUclockspeed << " MHz";
+    cout << "\nCPU Clock Speed: " << CPUclockspeed << " MHz";
+    cout << "\nNumber of cores: " << Cores;
+    cout << "\nMonitor Resolution: " << Monitor_Res;
+    cout << "\nPerformance Score: " << Performance;
+    cout << "\nRecommended Graphics Quality: " << graphicsQuality << "\n";
+}
+
 
 
