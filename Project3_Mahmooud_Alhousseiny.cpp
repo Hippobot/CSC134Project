@@ -41,3 +41,9 @@ float getMultiplier(int choice)
 	return Multiplier;
 }	
 
+double CalcPerformanceScore(double GPUclockspeed,double CPUclockspeed,double Multiplier,double Cores, )
+{
+	return ((5 * GPUclockspeed) + (Cores * CPUclockspeed)) * Multiplier;
+}
+
+
