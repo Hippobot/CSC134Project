@@ -46,4 +46,21 @@ double CalcPerformanceScore(double GPUclockspeed,double CPUclockspeed,double Mul
 	return ((5 * GPUclockspeed) + (Cores * CPUclockspeed)) * Multiplier;
 }
 
+string getRecommendedQuality(double Performance)
+{
+	if (Performance > 17000) {
+		return "Ultra";
+	} else if (Performance > 15000 && Performance <= 17000) {
+		return "High";
+	} else if (Performance > 13000 && Performance <= 15000) {
+		return "Medium";
+	} else if (Performance > 11000 && Performance <= 13000) {
+		return "Low";
+	} else if (Performance <= 11000) {
+		return "Unable to Play";
+	}
+	return"";
+}
+
+
 
