@@ -26,5 +26,18 @@ string getResolution(int choice)
 	return Monitor_Res;
 }
 
-	
+float getMultiplier(int choice)
+{
+	float Multiplier = 0;
+	if (choice == 1) {
+		Multiplier = 1;
+	} else if (choice == 2) {
+		Multiplier = 0.75;
+	} else if (choice == 3) {
+		Multiplier = 0.55;
+	} else if (choice == 4) {
+		Multiplier = 0.35;
+	}
+	return Multiplier;
+}	
 
