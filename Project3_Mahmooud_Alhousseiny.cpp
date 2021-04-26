@@ -11,4 +11,20 @@ void displayTitle()
 	
 }
 
+string getResolution(int choice)
+{
+	string Monitor_Res;
+	if (choice == 1){
+		Monitor_Res = "1280x720";
+	} else if (choice == 2) {
+		Monitor_Res = "1920x1080";
+	} else if (choice == 3) {
+		Monitor_Res = "2560x1440";
+	} else if (choice == 4) {
+		Monitor_Res = "3840x2160";
+	}
+	return Monitor_Res;
+}
+
+	
 
