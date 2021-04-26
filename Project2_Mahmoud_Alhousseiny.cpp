@@ -4,15 +4,15 @@ using namespace std;
 int main()
 {
 	int ComputerNumber, GPUclockspeed, CPUclockspeed, Cores;
-	string resolution, graphicsQuality;
-	float performanceScore, multiplier;
+	string Monitor_Res, graphicsQuality;
+	float Performance, multiplier;
 	float highPerformanceScore = 0, lowPerformanceScore = 0;
 	
 	cout << "How many computers are being processed? ";
 	cin >> ComputerNumber;
 	if (ComputerNumber > 0)
 	{
-		
+		cout << endl;
 		cout << "Computer Hardware Graphics Quality Recommendation Tool\n";
 		
 		for (int i = 0; i < ComputerNumber; i++)
@@ -62,22 +62,22 @@ int main()
             
 			if (choice == 1)
             {
-                resolution = "1280 x 720";
+                Monitor_res = "1280 x 720";
                 multiplier = 1;
             }
             else if (choice == 2)
             {
-                resolution = "1920 x 1080";
+                Monitor_res = "1920 x 1080";
                 multiplier = 0.75;
             }
             else if (choice == 3)
             {
-                resolution = "2560 x 1440";
+                Monitor_res = "2560 x 1440";
                 multiplier = 0.55;
             }
             else if (choice == 4)
             {
-                resolution = "3840 x 2160";
+                Monitor_res = "3840 x 2160";
                 multiplier = 0.35;
             }
             
